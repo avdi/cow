@@ -64,7 +64,7 @@ group :test do
   gem 'turn', '~> 0.8.3', :require => false
 end
 
-gem "sinatra"
+gem "sinatra", :require => 'sinatra/base'
 
 group :development do
   gem "passenger"
