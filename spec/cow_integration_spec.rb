@@ -12,7 +12,7 @@ describe "The Cow app" do
   end
 
   it "generates a cow" do
-      expected = (<<'END').strip
+    expected = (<<'END').strip
  _______
 < Hello >
  -------
@@ -23,6 +23,22 @@ describe "The Cow app" do
                 ||     ||
 END
     get '/'
+    result = last_response.body.strip
+    result.should eq(expected)
+  end
+
+  it 'uses the message parameter if supplied' do
+    expected = (<<'END').strip
+ ___________
+< Good bye! >
+ -----------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+END
+    get '/', 'message' => "Good bye!"
     result = last_response.body.strip
     result.should eq(expected)
   end
