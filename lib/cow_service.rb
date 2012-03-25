@@ -2,7 +2,7 @@ require 'sinatra/base'
 require 'json'
 require_relative 'cowsay'
 
-class Cow < Sinatra::Base
+class CowService < Sinatra::Base
   get '/' do
     content_type :txt
     message = params.fetch('message') { 'Hello' }
