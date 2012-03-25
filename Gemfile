@@ -11,7 +11,6 @@ gem 'railties',           RAILS_VERSION, :require => 'rails'
 gem 'tzinfo'
 
 gem 'dm-rails',          '~> 1.2.1'
-gem 'dm-sqlite-adapter', DM_VERSION
 
 # You can use any of the other available database adapters.
 # This is only a small excerpt of the list of all available adapters
@@ -36,7 +35,7 @@ gem 'dm-transactions',      DM_VERSION
 gem 'dm-aggregates',        DM_VERSION
 gem 'dm-timestamps',        DM_VERSION
 gem 'dm-observer',          DM_VERSION
-
+gem 'dm-postgres-adapter',  DM_VERSION
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -72,6 +71,7 @@ group :development do
 end
 
 group :test, :development do
+  gem 'dm-sqlite-adapter', DM_VERSION
   gem "rspec-rails"
   gem "guard"
   gem "guard-bundler"
