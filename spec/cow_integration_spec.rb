@@ -11,6 +11,16 @@ describe "The Cow app" do
     Sinatra::Application
   end
 
+  def normalize_text(text)
+    text.strip!
+    text.gsub!(/\s+$/,'')
+    text
+  end
+
+  let(:response_body) {
+    normalize_text(last_response.body)
+  }
+
   it "generates a cow" do
     expected = (<<'END').strip
  _______
@@ -23,8 +33,7 @@ describe "The Cow app" do
                 ||     ||
 END
     get '/'
-    result = last_response.body.strip
-    result.should eq(expected)
+    response_body.should eq(expected)
   end
 
   it 'uses the message parameter if supplied' do
@@ -39,7 +48,30 @@ END
                 ||     ||
 END
     get '/', 'message' => "Good bye!"
-    result = last_response.body.strip
-    result.should eq(expected)
+    response_body.should eq(expected)
+  end
+
+  it 'accepts a cowfile parameter' do
+    expected = (<<'END').strip
+ _______
+< Hello >
+ -------
+\                             .       .
+ \                           / `.   .' "
+  \                  .---.  <    > <    >  .---.
+   \                 |    \  \ - ~ ~ - /  /    |
+         _____          ..-~             ~-..-~
+        |     |   \~~~\.'                    `./~~~/
+       ---------   \__/                        \__/
+      .'  O    \     /               /       \  "
+     (_____,    `._.'               |         }  \/~~~/
+      `----.          /       }     |        /    \__/
+            `-.      |       /      |       /      `. ,~~|
+                ~-.__|      /_ - ~ ^|      /- _      `..-'
+                     |     /        |     /     ~-.     `-. _  _  _
+                     |_____|        |_____|         ~ - . _ _ _ _ _>
+END
+    get '/', 'cowfile' => "stegosaurus"
+    response_body.should eq(expected)
   end
 end
