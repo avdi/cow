@@ -65,6 +65,7 @@ group :test do
 end
 
 gem "sinatra", :require => 'sinatra/base'
+gem "erector", '= 0.9.0.pre1'
 
 group :development do
   gem "passenger"

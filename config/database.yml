@@ -20,5 +20,5 @@ test:
   database: db/._test.db
   <<: *defaults
 
-production: <%= ENV['DATABASE_URL'] %>
+
 

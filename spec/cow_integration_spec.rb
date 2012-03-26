@@ -1,7 +1,7 @@
 require 'rack/test'
 require 'sinatra'
 require 'json'
-require 'cow'
+require 'cow_service'
 
 set :environment, :test
 
@@ -9,7 +9,7 @@ describe "The Cow app" do
   include Rack::Test::Methods
 
   def app
-    Cow
+    CowService
   end
 
   def normalize_text(text)
