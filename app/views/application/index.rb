@@ -4,8 +4,11 @@ class Views::Application::Index < Erector::Widget
       text cow_text
     end
     form_for(cow_message) do |f|
+      f.label     :message
       f.text_area :message
+      f.label     :cowfile, "Template:"
       f.select    :cowfile, Cowsay.cowfiles
+      f.submit    'Save'
     end
   end
 
