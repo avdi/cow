@@ -133,6 +133,8 @@ GEM
       rack
     rack-test (0.6.1)
       rack (>= 1.0)
+    rack_clicky (1.0.5)
+      rack
     railties (3.2.2)
       actionpack (= 3.2.2)
       activesupport (= 3.2.2)
@@ -213,6 +215,7 @@ DEPENDENCIES
   jquery-rails
   passenger
   rack-test
+  rack_clicky
   railties (~> 3.2.0)
   rspec-rails
   sass-rails (~> 3.2.0)

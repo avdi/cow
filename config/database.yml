@@ -20,5 +20,6 @@ test:
   database: db/._test.db
   <<: *defaults
 
-
-
+production:
+  database: db/._production.db
+  <<: *defaults
