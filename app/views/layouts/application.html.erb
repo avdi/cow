@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Cowsays.com</title>
+  <title>The cow says...</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -14,10 +14,14 @@
 
 
   <footer class="footer">
+    <p class="pull-right">
+      <a href="https://twitter.com/share" class="twitter-share-button" data-via="avdi">Tweet</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </p>
     <p>The <a href="http://www.nog.net/~tony/warez/cowsay.shtml">Cowsay</a>
       program was written by Tony Monroe, and
       is <a href="/cowsay-license.txt">distributed under the Artistic
-      License</a>. I (<a href="http://avdi.org">Avdi Grimm</a>) just
+      License</a>. I (<a href="http://avdi.org">Avdi&nbsp;Grimm</a>) just
       put it on the web.</p>
   </footer>
 
