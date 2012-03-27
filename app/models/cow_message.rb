@@ -2,7 +2,7 @@ class CowMessage
   include DataMapper::Resource
 
   property :id,      Serial
-  property :message, String, default: "Hello, world"
+  property :message, String, default: "Hello, world!"
   property :cowfile, String, default: "default"
 
   def to_s

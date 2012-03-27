@@ -1,5 +1,4 @@
-require 'spec_helper_lite'
-require 'active_model'
+require 'spec_helper_dm'
 require 'cowsay'
 require 'cow_message'
 

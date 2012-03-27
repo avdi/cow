@@ -67,6 +67,7 @@ end
 gem "sinatra", :require => 'sinatra/base'
 gem "erector", '= 0.9.0.pre1'
 gem 'anjlab-bootstrap-rails', '~> 2.0', :require => 'bootstrap-rails'
+gem 'fattr'
 
 group :development do
   gem "passenger"
