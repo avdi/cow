@@ -1,0 +1,20 @@
+pre#cow-view {
+    font-size: 20pt;
+    line-height: 100%;
+    background-color: transparent;
+    margin-top: 3ex;
+    margin-bottom: 3ex;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1ex;
+    font-family: "Inconsolata";
+    white-space: pre;
+    word-wrap: normal;
+    word-break: normal;
+    border: none;
+}
+
+pre.cow-preview {
+    width: 20em;
+    overflow: auto;
+}
