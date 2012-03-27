@@ -10,6 +10,7 @@
  *
  *= require_self
  *= require_tree .
- *= require app_bootstrap
+ *= require bootstrap
+ *= require responsive
 
 */
