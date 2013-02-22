@@ -1,8 +1,9 @@
 source 'http://rubygems.org'
 
-RAILS_VERSION = '~> 3.2.0'
+RAILS_VERSION = '~> 3.2.12'
 DM_VERSION    = '~> 1.2.0'
 
+gem 'rack',               '~> 1.4.5'
 gem 'activesupport',      RAILS_VERSION, :require => 'active_support'
 gem 'actionpack',         RAILS_VERSION, :require => 'action_pack'
 gem 'actionmailer',       RAILS_VERSION, :require => 'action_mailer'
@@ -35,13 +36,16 @@ gem 'dm-transactions',      DM_VERSION
 gem 'dm-aggregates',        DM_VERSION
 gem 'dm-timestamps',        DM_VERSION
 gem 'dm-observer',          DM_VERSION
-gem 'dm-postgres-adapter',  DM_VERSION
+
+group :production do
+  gem 'dm-postgres-adapter',  DM_VERSION
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   RAILS_VERSION
-  gem 'coffee-rails', RAILS_VERSION
+  gem 'sass-rails',   '~> 3.2.6'
+  gem 'coffee-rails', '~> 3.2.2'
   gem 'uglifier', '>= 1.0.3'
 end
 
