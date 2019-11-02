@@ -37,6 +37,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.2.0)
+    concurrent-ruby (1.1.5)
     daemon_controller (1.0.0)
     data_objects (0.10.8)
       addressable (~> 2.1)
@@ -106,7 +107,8 @@ GEM
     guard-rspec (0.6.0)
       guard (>= 0.10.0)
     hike (1.2.1)
-    i18n (0.6.1)
+    i18n (0.9.5)
+      concurrent-ruby (~> 1.0)
     journey (1.0.4)
     jquery-rails (2.0.1)
       railties (>= 3.2.0, < 5.0)
